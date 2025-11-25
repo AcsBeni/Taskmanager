@@ -1,0 +1,30 @@
+body{
+    background-color: #dacccc;
+}
+header{
+    background-color: slategrey;
+    color:  white;
+    padding:  20px;
+    text-align: center;
+    
+}
+main{
+    padding:  10px;
+
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 80%;
+}
+.container{
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+    padding:  10px;
+}
+
+.text-justify{
+    text-align: justify;
+}

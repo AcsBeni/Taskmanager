@@ -1,0 +1,19 @@
+<%- include('header') %>
+<%- include('message') %>
+<div class="col-lg-6 offset-lg-3 offset-xl-4">
+    <h1>Belépes</h1>
+
+<form action="/users/login" method="POST">
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" name="email" value="<%= session.body ? session.body.email : '' %>" placeholder="name@example.com">
+        <label for="floatingInput">Email cím</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+        <label for="floatingPassword">jelszó</label>
+      </div>
+      <input type="submit" value="Belépés" class="btn btn-primary mt-3">
+</form>
+
+</div>
+<%- include('footer') %>
