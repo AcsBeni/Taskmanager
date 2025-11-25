@@ -1,0 +1,16 @@
+<%- include('header') %>
+<%- include('message') %>
+<h3>Feladat módosítás</h3>
+  <form action="/tasks/edit/<%=id%>" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nev" name="title" value="<%= data.title %>"  placeholder="">
+        <label for="nev">title</label>
+    </div>
+    <span>
+        <a href="/tasks" class="btn btn-secondary">Vissza</a>
+        <input type="submit" value="Felvesz" name="Updatebutton" class="btn btn-primary">
+        
+    </span>
+  </form>
+ 
+<%- include('footer') %>

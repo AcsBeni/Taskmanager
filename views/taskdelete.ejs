@@ -1,0 +1,16 @@
+<%- include('header') %>
+<%- include('message') %>
+<h3>Feladat törlése</h3>
+<p>Biztosan törlöd a kiválasztott Feladatot?</p>
+  <form action="/tasks/delete/<%=id%>" method="POST">
+    
+    <span>
+        <a href="/tasks" class="btn btn-secondary">Vissza</a>
+        <input type="submit" value="Delete" name="" class="btn btn-danger">
+    </span>
+    
+      
+     
+  </form>
+ 
+<%- include('footer') %>

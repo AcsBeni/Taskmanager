@@ -18,13 +18,13 @@
         <% results.forEach((item, index) => { %>
 
             <tr>
-                <td><%= (index+1) %>.</td>
+                <td><%= (item.id) %>.</td>
                 <td><%= item.title %></td>
                 <td><%= item.start %></td>
                 <td><%= item.end %></td>
                 <td class="text-end">
-                    <a href="">SZ</a>
-                    <a href="">T</a>
+                    <a href="/tasks/edit/<%=item.id%>">SZ</a>
+                    <a href="/tasks/delete/<%=item.id%>">T</a>
                 </td>
             </tr>
 
