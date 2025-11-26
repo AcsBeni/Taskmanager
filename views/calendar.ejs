@@ -2,24 +2,28 @@
 
 <h1>Naptár</h1>
 
-<div id='calendar'></div>
+<div id="calendar"></div>
 
 <script>
-    var events = <%- JSON.stringify(calEvents) %>;
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-     
-        initialView: 'dayGridMonth',
-        locale: 'hu',
-        headerToolbar: {
-            left: 'prev,today,next',
-            center: 'title',
-            right: 'multiMonthYear,dayGridMonth,timeGridWeek,timeGridDay,listWeek',
-        },
-        events: events
-    });
-    calendar.render();
+    // Ensure calEvents exists and is valid JSON
+    const events = <%- JSON.stringify(calEvents || []) %>;
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const calendarEl = document.getElementById('calendar');
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'hu',
+            headerToolbar: {
+                left: 'prev,today,next',
+                center: 'title',
+                right: 'multiMonthYear,dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+            },
+            events: events
+        });
+
+        calendar.render();
+    });
 </script>
 
 <%- include('footer') %>
